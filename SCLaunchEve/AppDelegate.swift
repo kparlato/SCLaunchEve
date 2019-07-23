@@ -28,6 +28,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         menu.addItem(NSMenuItem(title: "Launch All", action: #selector(AppDelegate.launchEve), keyEquivalent: ""))
         menu.addItem(NSMenuItem(title: "Launcher Only", action: #selector(AppDelegate.terminalLauncher), keyEquivalent: ""))
         menu.addItem(NSMenuItem(title: "Web Tools Only", action: #selector(AppDelegate.launchWebsites), keyEquivalent: ""))
+        menu.addItem(NSMenuItem(title: "Settings...", action: #selector(AppDelegate.openSettings), keyEquivalent: ""))
         menu.addItem(NSMenuItem(title: "Quit", action: #selector(AppDelegate.quit), keyEquivalent: ""))
         item?.menu = menu
         
@@ -41,8 +42,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     @objc func launchWebsites() {
         // "Web Tools Only"
-        launchInDefaultBrowser(url: URL(string: "https://evescoutrescue.com/copilot/index.php"))
-        launchInDefaultBrowser(url: URL(string: "https://tripwire.eve-apps.com"))
+        if let websiteArray = UserDefaults.standard.stringArray(forKey: "websiteArray") {
+            for website in websiteArray {
+                launchInDefaultBrowser(url: URL(string: website))
+            }
+        }
     }
     
     
@@ -70,6 +74,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         if url != nil {
             NSWorkspace.shared.open(url!)
         }
+    }
+    
+    @objc func openSettings() {
+        let myWindowController = NSStoryboard(name: "Main", bundle: nil).instantiateController(withIdentifier: "settingsWindow")
+        (myWindowController as! NSWindowController).showWindow(self)
+        NSApp.activate(ignoringOtherApps: true)
     }
     
     @objc func quit() {

@@ -10,6 +10,8 @@
 		EBBDF8A022E747C8004BB4C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBDF89F22E747C8004BB4C1 /* AppDelegate.swift */; };
 		EBBDF8A222E747C9004BB4C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBBDF8A122E747C9004BB4C1 /* Assets.xcassets */; };
 		EBBDF8AE22E74851004BB4C1 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBBDF8AD22E74851004BB4C1 /* MainMenu.xib */; };
+		EBBDF8BB22E769C4004BB4C1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBDF8BA22E769C4004BB4C1 /* ViewController.swift */; };
+		EBBDF8BF22E76A1F004BB4C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBBDF8BE22E76A1F004BB4C1 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		EBBDF8A622E747C9004BB4C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EBBDF8A722E747C9004BB4C1 /* SCLaunchEve.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SCLaunchEve.entitlements; sourceTree = "<group>"; };
 		EBBDF8AD22E74851004BB4C1 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainMenu.xib; path = ../../../../.Trash/MainMenu.xib; sourceTree = "<group>"; };
+		EBBDF8BA22E769C4004BB4C1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EBBDF8BE22E76A1F004BB4C1 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,8 +56,10 @@
 			isa = PBXGroup;
 			children = (
 				EBBDF89F22E747C8004BB4C1 /* AppDelegate.swift */,
+				EBBDF8BA22E769C4004BB4C1 /* ViewController.swift */,
 				EBBDF8A122E747C9004BB4C1 /* Assets.xcassets */,
 				EBBDF8A622E747C9004BB4C1 /* Info.plist */,
+				EBBDF8BE22E76A1F004BB4C1 /* Main.storyboard */,
 				EBBDF8AD22E74851004BB4C1 /* MainMenu.xib */,
 				EBBDF8A722E747C9004BB4C1 /* SCLaunchEve.entitlements */,
 			);
@@ -123,6 +129,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBBDF8BF22E76A1F004BB4C1 /* Main.storyboard in Resources */,
 				EBBDF8A222E747C9004BB4C1 /* Assets.xcassets in Resources */,
 				EBBDF8AE22E74851004BB4C1 /* MainMenu.xib in Resources */,
 			);
@@ -135,6 +142,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBBDF8BB22E769C4004BB4C1 /* ViewController.swift in Sources */,
 				EBBDF8A022E747C8004BB4C1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
