@@ -30,6 +30,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         menu.addItem(NSMenuItem(title: "Web Tools Only", action: #selector(AppDelegate.launchWebsites), keyEquivalent: ""))
         menu.addItem(NSMenuItem(title: "Quit", action: #selector(AppDelegate.quit), keyEquivalent: ""))
         item?.menu = menu
+        
     }
 
     @objc func launchEve() {
@@ -50,10 +51,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // sends the terminal command "eveonline" to launch the Wine version of the launcher
         
         let task = Process()
-        task.executableURL = URL(fileURLWithPath: "/usr/local/bin/eveonline")
-        
-        
-        // Launch the task
+        task.executableURL = URL(fileURLWithPath: "/bin/bash")
+        task.arguments = ["-c", "/usr/local/bin/wine ~/.wine/drive_c/EVE/eve.exe &> /dev/null &disown"]
+     
         do {
             try task.run()
             print ("Task running")
@@ -80,4 +80,3 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // Insert code here to tear down your application
     }
 }
-
