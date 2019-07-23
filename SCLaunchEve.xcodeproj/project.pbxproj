@@ -9,16 +9,16 @@
 /* Begin PBXBuildFile section */
 		EBBDF8A022E747C8004BB4C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBDF89F22E747C8004BB4C1 /* AppDelegate.swift */; };
 		EBBDF8A222E747C9004BB4C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBBDF8A122E747C9004BB4C1 /* Assets.xcassets */; };
-		EBBDF8A522E747C9004BB4C1 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBBDF8A322E747C9004BB4C1 /* MainMenu.xib */; };
+		EBBDF8AE22E74851004BB4C1 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBBDF8AD22E74851004BB4C1 /* MainMenu.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EBBDF89C22E747C8004BB4C1 /* SCLaunchEve.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SCLaunchEve.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBBDF89F22E747C8004BB4C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EBBDF8A122E747C9004BB4C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		EBBDF8A422E747C9004BB4C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		EBBDF8A622E747C9004BB4C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EBBDF8A722E747C9004BB4C1 /* SCLaunchEve.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SCLaunchEve.entitlements; sourceTree = "<group>"; };
+		EBBDF8AD22E74851004BB4C1 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainMenu.xib; path = ../../../../.Trash/MainMenu.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,8 +53,8 @@
 			children = (
 				EBBDF89F22E747C8004BB4C1 /* AppDelegate.swift */,
 				EBBDF8A122E747C9004BB4C1 /* Assets.xcassets */,
-				EBBDF8A322E747C9004BB4C1 /* MainMenu.xib */,
 				EBBDF8A622E747C9004BB4C1 /* Info.plist */,
+				EBBDF8AD22E74851004BB4C1 /* MainMenu.xib */,
 				EBBDF8A722E747C9004BB4C1 /* SCLaunchEve.entitlements */,
 			);
 			path = SCLaunchEve;
@@ -92,6 +92,11 @@
 				TargetAttributes = {
 					EBBDF89B22E747C8004BB4C1 = {
 						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -119,7 +124,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EBBDF8A222E747C9004BB4C1 /* Assets.xcassets in Resources */,
-				EBBDF8A522E747C9004BB4C1 /* MainMenu.xib in Resources */,
+				EBBDF8AE22E74851004BB4C1 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,17 +140,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		EBBDF8A322E747C9004BB4C1 /* MainMenu.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EBBDF8A422E747C9004BB4C1 /* Base */,
-			);
-			name = MainMenu.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		EBBDF8A822E747C9004BB4C1 /* Debug */ = {
@@ -267,7 +261,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = SCLaunchEve/SCLaunchEve.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 9395E6VLTQ;
@@ -286,7 +279,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = SCLaunchEve/SCLaunchEve.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 9395E6VLTQ;
